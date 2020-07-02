@@ -9,10 +9,10 @@ const server = http.createServer((req,res) => {
 	let extname = path.extname(pathname);
 	if (pathname === '/') {
 		res.writeHead(200,{'Content-Type': 'text/html'});
-		res.end(fs.readFileSync(path.join(__dirname, pathname, 'index.html')));
+		res.end(fs.readFileSync(path.join(__dirname, 'views/' + pathname, 'index.html')));
 	} else if (extname === '.jpg' || extname === '.png') {
 		res.writeHead(200,{'Content-Type': 'image/' + extname.substr(1)});
-		res.end(fs.readFileSync(path.join(__dirname, pathname)));
+		res.end(fs.readFileSync(path.join(__dirname, 'views/' + pathname)));
 	} else {
 		res.statusCode = 404;
 		res.end();

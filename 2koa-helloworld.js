@@ -2,14 +2,15 @@ const koa = require('koa');
 const app = new koa();
 app.use(async (ctx,next) => {
 	await next();
+	// ctx上下文对象，封装了request,response对象,还内置了一些常用属性，ctx.state,ctx.app,ctx.cookies,ctx.throw
 	// ctx.response.type = 'text/html';
 	// ctx.response.body = '<h1>Hello World</h1>'
 
 	// get请求获取参数
 	// ctx.response.body = {
-	// 	url: ctx.request.url,
-	// 	query: ctx.request.query,
-	// 	querystring: ctx.request.querystring
+	// 	url: ctx.request.url,// 获取请求的url
+	// 	query: ctx.request.query,// 获取解析的查询字符串
+	// 	querystring: ctx.request.querystring // 获取原始查询字符串
 	// }
 
 	// post请求获取参数的方法
