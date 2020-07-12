@@ -1,6 +1,6 @@
 const koa = require('koa');
 const app = new koa();
-const bodyParser = require('koa-bodyparser');// 可解析post参数
+const bodyParser = require('koa-bodyparser');// 可解析post的参数
 
 // app.use(bodyParser());
 // app.use(async (ctx) => {

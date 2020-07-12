@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset = 'UTF-8'>
+        <meta name='viewport' content='width=device-width,initial-scale=1'>
+        <!-- <link rel="stylesheet" href="../css/login.css"> -->
+        <style>
+            body{
+                background-color: #223458;
+            }
+            form{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                width: 500px;
+                height: 300px;
+                border: 1px solid #ccc;
+                text-align: center;
+                border-radius: 10px;
+                background-color: #fff;
+            }
+            input{
+                width : 330px;
+                height: 45px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                margin: 10px 0px;
+                padding-left: 8px;
+            }
+            button{
+                width: 60px;
+                height: 38px;
+                border-radius: 5px;
+            }
+            .tip{
+                color: #fff;
+            }
+        </style>
+    </head>
+    <form action="/user/login" method='post'>
+        <input name='name' type="text" placeholder="请输入用户名:Zmikoo"/>
+        <br>
+        <input name="password" type="password" placeholder="请输入密码:123456"/>
+        <br>
+        <button>登陆</button>
+    </form>
+    <div class="tip">{{content}}</div>
+</html>

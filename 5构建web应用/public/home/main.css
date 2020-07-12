@@ -1,0 +1,6 @@
+input[type='text']{
+    width : 200px;
+    height: 80px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

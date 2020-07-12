@@ -8,10 +8,10 @@ const static = require('koa-static');
 const Router = require('koa-router');
 const app = new koa();
 const router = new Router();
-app.use(views(__dirname+'/views',{
+app.use(views(__dirname+'/views',{// 加模板引擎
 	map: {html:'ejs'}
 }));
-app.use(static(path.join(__dirname,'/static')));
+app.use(static(path.join(__dirname,'/static')));// 加静态资源
 
 router.get('/',async(ctx,next) => {
 	await ctx.render('index');
